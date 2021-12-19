@@ -38,7 +38,7 @@ window.addEventListener('scroll', () => {
   sectionsArray.forEach(function (active) {
     let navBarItem = navBarList.querySelector(`[data-nav=${active.id}]`);
     let topLocation = active.getBoundingClientRect().top;
-    if (topLocation >= -100 && topLocation <= 300) {
+    if (topLocation >= 0 && topLocation <= 300) {
       active.classList.add('your-active-class');
       navBarItem.classList.add('active-bar');
     } else {
@@ -46,4 +46,14 @@ window.addEventListener('scroll', () => {
       navBarItem.classList.remove('active-bar');
     }
   });
+});
+
+//A smooth scrolling behavior  using addEventListener and scrollIntoView
+navBarList.addEventListener('click', (event) => {
+  event.preventDefault();
+  if (event.target.dataset.nav) {
+    document
+      .getElementById(`${event.target.dataset.nav}`)
+      .scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 });
