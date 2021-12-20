@@ -23,7 +23,7 @@
 const navBarList = document.getElementById('navbar__list'),
   sectionsArray = Array.from(document.getElementsByTagName('section'));
 
-//building navigation bar using  for of loop and create links to navigation and scroll   to sections
+//building navigation bar using ( for of )loop and create links to navigation and scroll  to sections dynamis using section.id and dataset
 const createNavList = () => {
   for (const section of sectionsArray) {
     const listItem = `<li><a href='#${section.id}' data-nav='${section.id}' class='menu__link'>${section.dataset.nav}</a></li>`;
@@ -33,7 +33,7 @@ const createNavList = () => {
 
 createNavList();
 
-// set section active when scroll  using  getBoundingClientRect and set active navbar link
+// addEventListenerto  scroll  and with value of top in getBoundingClientRect . After that use topLocation variable  in condion if() to add & remove css style using classList to  set section active & navbar link
 window.addEventListener('scroll', () => {
   sectionsArray.forEach(function (active) {
     let navBarItem = navBarList.querySelector(`[data-nav=${active.id}]`);
@@ -48,7 +48,7 @@ window.addEventListener('scroll', () => {
   });
 });
 
-//A smooth scrolling behavior  using addEventListener and scrollIntoView
+//A smooth scrolling behavior  using addEventListener and scrollIntoView . when you click navigation bar item its going smoothly
 navBarList.addEventListener('click', (event) => {
   event.preventDefault();
   if (event.target.dataset.nav) {
