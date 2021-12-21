@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  *
  * Manipulating the DOM exercise.
