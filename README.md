@@ -8,7 +8,7 @@
 * A Responsive layout of the landing page should be created to use across all devices, such as modern desktops, tablets, and phone browsers.
 * Added smooth scrolling from one section to other
 
-##source
+## source
 
 
 * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
