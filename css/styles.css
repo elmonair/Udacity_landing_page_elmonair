@@ -83,6 +83,14 @@ section {
   display: inline-block;
 }
 
+/*Make the navigation bar is responsive too across all these devices.*/
+
+@media (max-width: 600px) {
+  .navbar__menu li {
+    display: block;
+    text-align: center;
+  }
+}
 .navbar__menu .menu__link {
   display: block;
   padding: 1em;
